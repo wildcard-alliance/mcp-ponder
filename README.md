@@ -19,3 +19,21 @@ Install from PyPI:
 
 ```bash
 pip install mcp-think-tool
+```
+
+## Configuration
+
+To use this tool with Claude in Windsurf, add the following configuration to your MCP config file:
+
+```json
+"think": {
+    "command": "/home/xxx/.local/bin/mcp-think-tool",
+    "args": [],
+    "type": "stdio",
+    "pollingInterval": 30000,
+    "startupTimeout": 30000,
+    "restartOnFailure": true
+}
+```
+
+The `command` field should point to the directory where you installed the python package using pip.
