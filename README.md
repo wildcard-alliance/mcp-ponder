@@ -1,33 +1,33 @@
-# MCP Think Tool Server
+# MCP Ponder Tool Server
 
-A Model Context Protocol (MCP) server implementing the "think" tool for improving Claude's complex reasoning capabilities.
+A Model Context Protocol (MCP) server implementing the "ponder" tool for improving Claude's complex reasoning capabilities.
 
 ## Overview
 
-This MCP server implements the "think" tool as described in Anthropic's [blog post](https://www.anthropic.com/engineering/claude-think-tool), which provides Claude with a dedicated space for structured thinking during complex problem-solving tasks. The think tool has been shown to significantly improve performance in complex tasks requiring policy adherence and reasoning in long chains of tool calls.
+This MCP server implements the "ponder" tool, inspired by Anthropic's "think" tool as described in their [blog post](https://www.anthropic.com/engineering/claude-think-tool), which provides Claude with a dedicated space for structured thinking during complex problem-solving tasks. The ponder tool has been shown to significantly improve performance in complex tasks requiring policy adherence and reasoning in long chains of tool calls.
 
 ## Features
 
 - **Structured Thinking Space**: Provides Claude with a dedicated place to break down complex problems
-- **Thought History**: Maintains a log of all thoughts with timestamps for reference
+- **Thought History**: Maintains a log of all ponderings with timestamps for reference
 - **Statistics and Analysis**: Offers metadata about thinking patterns
-- **Clean Slate Option**: Allows clearing thought history when starting fresh
+- **Clean Slate Option**: Allows clearing pondering history when starting fresh
 
 ## Installation
 
 Install from PyPI:
 
 ```bash
-pip install mcp-think-tool
+pip install mcp-ponder-tool
 ```
 
 ## Configuration
 
-To use this tool with Claude in Windsurf, add the following configuration to your MCP config file:
+To use this tool with Claude, add the following configuration to your MCP config file:
 
 ```json
-"think": {
-    "command": "/home/xxx/.local/bin/mcp-think-tool",
+"ponder": {
+    "command": "/home/xxx/.local/bin/mcp-ponder-tool",
     "args": [],
     "type": "stdio",
     "pollingInterval": 30000,
